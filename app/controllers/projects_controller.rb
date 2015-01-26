@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+      before_action :authenticate_user!, :only => [:new]
+
 
 
   def index
@@ -10,6 +12,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
+
     # render :text =>params[:project]
      @project = Project.new(params.require(:project).permit(:title, :body))
      @project.user=current_user
