@@ -1,0 +1,12 @@
+<%=link_to "Create New Project  ||", new_project_path %> 
+<hr>
+<h1> Project Index </h1>
+<hr>
+<hr>
+<hr>
+
+  <%@projects.each do |project| %>
+    <h4> <%= project.title %> </h4>
+    <p>  <%= project.body %>  </p>
+    <hr>
+  <%end%>

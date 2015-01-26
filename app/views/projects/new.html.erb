@@ -1,0 +1,29 @@
+<%=link_to "Project Index  ||", projects_path%>
+<hr>
+<h1> Create New Project </h1>
+<hr>
+<hr>
+<hr>
+
+ 
+  <%if @project.errors.any? %>
+    <ul>
+    <% @project.errors.full_messages.each do |msg| %>
+    <li> <%= msg %> </li>
+    <%end%>
+    </ul>
+  <%end%>
+
+
+
+<%=form_for @project do |x| %> 
+    <p>
+    <%=x.label :title%>
+    <%=x.text_field :title%> 
+    </p>
+    <p>
+    <%=x.label :body%>
+    <%=x.text_area :body%>
+    </p>
+    <%=x.submit%>
+<%end%> 
