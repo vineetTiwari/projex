@@ -1,0 +1,26 @@
+ <%=link_to "Projects Index", projects_path%>
+ <hr>
+
+ <h3> Edit this project </h3>
+
+  <%if @project.errors.any? %>
+    <ul>
+    <% @project.errors.full_messages.each do |msg| %>
+    <li> <%= msg %> </li>
+    <%end%>
+    </ul>
+  <%end%>
+
+
+
+<%=form_for @project do |x| %> 
+    <p>
+    <%=x.label :title%>
+    <%=x.text_field :title%> 
+    </p>
+    <p>
+    <%=x.label :body%>
+    <%=x.text_area :body%>
+    </p>
+    <%=x.submit%>
+<%end%> 

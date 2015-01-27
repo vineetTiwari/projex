@@ -2,25 +2,28 @@
 <hr>
 <hr>
 <hr>
-<h1> project title </h1>
+<h3> Project title </h3>
 <%=@project.title%>
 <br>
-<h1> project body </h1>
+<h3> Project body </h3>
 <%=@project.body%>
+<%=link_to "Edit this project", edit_project_path %>
 <hr>
 <hr>
 
 
-<h1> Current Tasks (for this project) </h1>
+
+<h1> Current Tasks </h1>
 <hr>
 <hr>
 <hr>
 <% @tasks.each do |task| %>
-<h2> task title </h2>
+<h4> Task Title </h4>
 <%= task.title %>
 <br>
-<h2> task body </h2>
+<h4> Task body </h4>
 <%= task.body %>
+<hr>
 <%end%>
 
 
@@ -34,5 +37,10 @@
 <%=x.label :body %>
 <%=x.text_area :body %>
 <br>
-<%=x.submit%>
+<%=x.submit %>
+
+
+<%#= button_to() ,method: post %>
+
+
 <%end%> 
