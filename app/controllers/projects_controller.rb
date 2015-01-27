@@ -38,6 +38,17 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
   end
 
+  def update
+    @project =Project.new(params.require(:project).permit(:title, :body))
+    @project.user=current_user
+      if @project.save
+        flash[:notice] = "Project changes saved"
+        redirect_to projects_path
+      else
+        render 'edit'
+      end
+  end
+
 
 
 
