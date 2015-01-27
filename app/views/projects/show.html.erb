@@ -10,6 +10,9 @@
 <%=@project.body%>
 <br>
 <%=link_to "Edit this project", edit_project_path %>
+<br>
+<%=link_to "Delete this project", project_path, method: :delete, 
+data: { confirm: "Are you Sure?"} %>
 <hr>
 <hr>
 
