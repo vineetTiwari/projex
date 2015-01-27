@@ -24,8 +24,16 @@ class ProjectsController < ApplicationController
         else
           render 'new'
         end
+  end
+
+  def show
+
+    @project = Project.find(params[:id])
+    @task = @project.tasks.new
+    @tasks= @project.tasks.all
 
   end
+
 
 
 

@@ -1,0 +1,38 @@
+<h1> Current Project </h1>
+<hr>
+<hr>
+<hr>
+<h1> project title </h1>
+<%=@project.title%>
+<br>
+<h1> project body </h1>
+<%=@project.body%>
+<hr>
+<hr>
+
+
+<h1> Current Tasks (for this project) </h1>
+<hr>
+<hr>
+<hr>
+<% @tasks.each do |task| %>
+<h2> task title </h2>
+<%= task.title %>
+<br>
+<h2> task body </h2>
+<%= task.body %>
+<%end%>
+
+
+<hr>
+<h4> Create a new task for this project </h4>
+
+<%=form_for @task, url: project_tasks_path(@project) do |x| %>
+<%=x.label :title%>
+<%=x.text_area :title %>
+<br>
+<%=x.label :body %>
+<%=x.text_area :body %>
+<br>
+<%=x.submit%>
+<%end%> 
