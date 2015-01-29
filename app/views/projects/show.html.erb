@@ -1,4 +1,6 @@
 
+<container>
+  
 <div class="cool">
 <h1> Current Project </h1>
 </div>
@@ -29,7 +31,7 @@ data: { confirm: "Are you Sure?"}, class: "btn btn-default cool" %>
 <h4> Task body </h4>
 <%= task.body %>
 <%=link_to "Delete this task", project_task_path(@project, task), method: :delete, 
-data: { confirm: "Are you Sure?"}, class: "btn btn-default cool" %>
+data: { confirm: "Are you Sure?"}, class: "btn btn-default cool buttonbump" %>
 <hr>
 <%end%>
 
@@ -51,5 +53,7 @@ data: { confirm: "Are you Sure?"}, class: "btn btn-default cool" %>
 
 <%#= button_to() ,method: post %>
 
+</container>
 
 <%end%> 
+

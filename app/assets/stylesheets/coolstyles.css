@@ -21,5 +21,10 @@ padding-right:70px;
 }
 
 .bumpmeover {
-  padding-left:68px;
+  padding-left:-20px;
+}
+
+.buttonbump{
+  margin-left:50%;
+  float: right;
 }
