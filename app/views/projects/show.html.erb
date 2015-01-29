@@ -1,7 +1,7 @@
-<%=link_to "back", projects_path%>
+
+<div class="cool">
 <h1> Current Project </h1>
-<hr>
-<hr>
+</div>
 <hr>
 <h3> Project title </h3>
 <%=@project.title%>
@@ -9,16 +9,17 @@
 <h3> Project body </h3>
 <%=@project.body%>
 <br>
-<%=link_to "Edit this project", edit_project_path %>
-<br>
+<hr>
+<%=link_to "Edit this project", edit_project_path, class: "btn btn-default cool"%>
 <%=link_to "Delete this project", project_path, method: :delete, 
-data: { confirm: "Are you Sure?"} %>
+data: { confirm: "Are you Sure?"}, class: "btn btn-default cool" %>
 <hr>
 <hr>
 
 
-
+<div class="cool">
 <h1> Current Tasks </h1>
+</div>
 <hr>
 
 <% @tasks.each do |task| %>
@@ -27,6 +28,8 @@ data: { confirm: "Are you Sure?"} %>
 <br>
 <h4> Task body </h4>
 <%= task.body %>
+<%=link_to "Delete this task", project_task_path(@project, task), method: :delete, 
+data: { confirm: "Are you Sure?"}, class: "btn btn-default cool" %>
 <hr>
 <%end%>
 
