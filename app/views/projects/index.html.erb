@@ -11,12 +11,12 @@
     <%@projects.each do |project| %>
     <h4> <%= link_to project.title, project %> </h4>
     <p>  <%= project.body %>  </p>
-    <hr>
-    <p>
+     <p>
     <% if project.user %>
-    user: <%= project.user.email  %> 
+    posted by: <%= project.user.email  %> 
     <% end %>
     </p>
+    <hr>
   <%end%>
 
 </div>
