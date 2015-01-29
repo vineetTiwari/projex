@@ -6,19 +6,21 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %> 
   <%= csrf_meta_tags %>
   <link rel="stylesheet" href="stylesheets/coolstyles">
+  <link rel="stylesheet" href="animate.min.css">
 
 </head>
 <body>
 <nav class="navbar navbar-inverse">
 <div class="container-fluid"> 
 
+
  <ul> 
-
-<li><%=link_to "Project Index", projects_path %> 
-<%=link_to "New Project", new_project_path %> 
-
-<li class="navbar-right"><%=link_to "Logout", destroy_user_session_path, :method => :delete%></li>
+  <%=link_to "Project Index", projects_path %> 
+  <%=link_to "New Project", new_project_path %> 
+  <li class="navbar-right"><%=link_to "Logout", destroy_user_session_path,
+            :method => :delete, class: "btn btn-info" %> </li>
 </ul> 
+
 
 </div>
 </nav>

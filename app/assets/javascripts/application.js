@@ -15,13 +15,13 @@
 //= require turbolinks
 //= require_tree .
 
-
-
 $(document).ready(function(){
-$('h1').on('click', function(){
-
-$(this).hide()
-
-});
+  
+  $('a').on('mouseover', function(){
+    $(this).addClass('animated pulse');
+  });
+  $('h6').on('click', function(){
+  $(this).hide();
+  });
 
 });
