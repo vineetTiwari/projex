@@ -5,8 +5,7 @@
 <hr>
 <h1> Create New Project </h1>
 <hr>
-<hr>
-<hr>
+
 
  
   <%if @project.errors.any? %>
@@ -18,15 +17,20 @@
   <%end%>
 
 
-
+<div class="form-field">
 <%=form_for @project do |x| %> 
-    <p>
     <%=x.label :title%>
-    <%=x.text_field :title%> 
-    </p>
-    <p>
+    <%=x.text_field :title, class:"form-control" %> 
     <%=x.label :body%>
-    <%=x.text_area :body%>
-    </p>
-    <%=x.submit%>
+    <%=x.text_area :body, class:"form-control"%>
+    <%=x.submit class: "btn btn-default"%>
 <%end%> 
+</div>
+
+
+
+
+
+
+
+

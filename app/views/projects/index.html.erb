@@ -1,15 +1,23 @@
-<%=link_to "Create New Project  ||", new_project_path %> 
-<hr>
-<h1> Project Index </h1>
-<hr>
-<hr>
-<hr>
 
-  <%@projects.each do |project| %>
+<div class="page-header blue-background">
+<h1>Project Management HUB 1.0 <small> Login to add projects and tasks, or view current projects below</small></h1>
+</div>
+
+
+<div class="container">
+
+  <h1> Project Index </h1>
+    <%@projects.each do |project| %>
     <h4> <%= link_to project.title, project %> </h4>
     <p>  <%= project.body %>  </p>
     <hr>
-    <p>  <%= project.user_id %> </p>
+    <p>
+    <% if project.user %>
+    user: <%= project.user.email  %> 
+    <% end %>
+    </p>
   <%end%>
+
+</div>
 
 

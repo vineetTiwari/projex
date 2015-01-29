@@ -1,0 +1,19 @@
+.cool{
+  background-color:black;
+  color:white;
+}
+ul {
+  padding: 0px;
+
+}
+li {
+  display: inline;
+  padding-right: 20px;
+}
+
+.blue-background {
+
+margin-top: -10px;
+height: 100px;
+background-color:black;
+}
