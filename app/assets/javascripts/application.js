@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+
+$(document).ready(function(){
+$('h1').on('click', function(){
+
+$(this).hide()
+
+});
+
+});
