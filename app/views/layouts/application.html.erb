@@ -10,15 +10,23 @@
 
 </head>
 <body>
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-default bumpmeover">
 <div class="container-fluid"> 
 
 
  <ul> 
   <%=link_to "Project Index", projects_path %> 
   <%=link_to "New Project", new_project_path %> 
+   <li class="navbar-right"><%=link_to "Login",new_user_session_path, class: "btn btn-info" %> </li>
+
+
+
+
+
+
   <li class="navbar-right"><%=link_to "Logout", destroy_user_session_path,
             :method => :delete, class: "btn btn-info" %> </li>
+
 </ul> 
 
 
