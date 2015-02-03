@@ -15,6 +15,11 @@
 <%=link_to "Edit this project", edit_project_path, class: "btn btn-default cool"%>
 <%=link_to "Delete this project", project_path, method: :delete, 
 data: { confirm: "Are you Sure?"}, class: "btn btn-default cool" %>
+<%=link_to "Like this project", project_likes_path(@project), method: :post, class: "btn btn-default cool"%>
+(<%=@project.likes.count%>)
+
+
+
 <hr>
 <hr>
 

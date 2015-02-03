@@ -6,4 +6,12 @@ class Project < ActiveRecord::Base
   validates :title, presence: true
   validates :body, presence: true, length: {minimum: 10}
 
+  has_many :categorizations
+  has_many :categories, through: :categorizations
+
+  has_many :likes
+  has_many :users, through: :likes
+
+  # user.id = likes.user_id
+  # where p.id = likes.project_id
 end

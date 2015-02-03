@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
     resources :projects   do
     resources :tasks
+    resources :categorizations
+    resources :likes, only: :create
+    
   end
 
 end
