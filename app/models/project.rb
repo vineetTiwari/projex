@@ -9,7 +9,7 @@ class Project < ActiveRecord::Base
   has_many :categorizations
   has_many :categories, through: :categorizations
 
-  has_many :likes
+  has_many :likes, dependent: :destroy
   has_many :users, through: :likes
 
   # user.id = likes.user_id
