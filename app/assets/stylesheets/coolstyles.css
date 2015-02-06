@@ -6,7 +6,12 @@ body {
 
 .cool{
   color:gray;
+}
+
+.cooltwo{
+  color:gray;
   margin-left: -20px;
+
 }
 
 ul {
@@ -48,6 +53,10 @@ margin-bottom: 50px;
  padding: 40px;
  border-radius: 10px;
  width:70%;
+}
+
+.changed{
+  color:white;
 }
 
 
