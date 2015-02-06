@@ -1,14 +1,14 @@
 body {
- background: url('background02.jpg') no-repeat;
- color:white;
+ background: url('whitebg.jpg') no-repeat;
+ color:black;
 }
-
 
 
 .cool{
-  background-color:black;
-  color:white;
+  color:gray;
+  margin-left: -20px;
 }
+
 ul {
   padding: 0px;
 
@@ -24,7 +24,30 @@ height: 100px;
 background-color:black;
 padding-left:80px;
 padding-right:70px;
+color:white;
+}
 
+.realcenter{
+  position: relative;
+  text-align: center;
+}
+
+.btn{
+  background-color: black;
+}
+
+.navbar{
+background-color: black;
+margin-bottom: 50px;
+}
+
+.well {
+ background-color: rgba(255,255,255,0.5);
+ position: relative;
+ top: 45px;
+ padding: 40px;
+ border-radius: 10px;
+ width:70%;
 }
 
 

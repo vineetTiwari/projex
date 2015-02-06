@@ -1,29 +1,27 @@
 
 <div class="page-header blue-background">
-<h1>Project Management APP 2.0 <small> Login to add,delete, or like projects; you may also designate specific tasks for each project</small></h1>
+<h1>Project Management2.0 <small> Login to add,delete, or like projects. Multiple tasks can be assigned to each project</small></h1>
 </div>
 
 
-  <div class="text-center center" >
-        
-    
+  <div class="center well" >
+      <div class="cool container">
+      <h1> Current Projects </h1></div>
+      <%@projects.each do |project| %>
+      <h5> <%= link_to project.title, project %> </h5>
+      <p>  <%= project.body %>  </p>
+      <p><% if project.user %>posted by: <%= project.user.email%> 
+      <%end%></p><hr><%end%>
+      </div>
+  </div>
 
-    <div class="container text-center">
-          <div class="cool">
-          <h1> Project Index </h1>
-          </div>
-    <%@projects.each do |project| %>
-    <h4> <%= link_to project.title, project %> </h4>
-    <p>  <%= project.body %>  </p>
-     <p>
-    <% if project.user %>
-    posted by: <%= project.user.email  %> 
-    <% end %>
-    </p>
-    <hr>
-    <%end%>
-    </div>
-    <h6>  (Javascript compatiblity test: Click to hide) </h6>
+
+
+<div class="text-center well center">
+    <%= will_paginate @posts %>
+<h6>  (Javascript compatiblity test: Click to hide) </h6>
+
+  </div>
 
 
 

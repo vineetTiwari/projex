@@ -2,7 +2,8 @@ class ProjectsController < ApplicationController
       before_action :authenticate_user!, :only => [:new]
 
   def index
-    @projects = Project.all
+    @projects = Project.all.paginate(:page => params[:page])
+    # @posts = Project.paginate(:page => params[:page])
   end
 
   def new

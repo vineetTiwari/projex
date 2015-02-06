@@ -1,4 +1,6 @@
 class Project < ActiveRecord::Base
+  self.per_page = 3
+  
   belongs_to :user
 
 
@@ -11,6 +13,8 @@ class Project < ActiveRecord::Base
 
   has_many :likes, dependent: :destroy
   has_many :users, through: :likes
+
+  
 
   # user.id = likes.user_id
   # where p.id = likes.project_id
