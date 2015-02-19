@@ -4,10 +4,10 @@ Rails.application.routes.draw do
     root "projects#index"
 
     resources :projects   do
-    resources :tasks
-    resources :categorizations
-    resources :likes, only: :create
-    
+      resources :tasks 
+      resources :favourites
+      resources :categorizations
+      resources :likes, only: [:create]   
   end
 
 end

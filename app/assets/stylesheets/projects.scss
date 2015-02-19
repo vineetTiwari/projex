@@ -1,3 +1,124 @@
 // Place all the styles related to the projects controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.centered {
+  ext-shadow: 0 0 4px #000;
+  -moz-text-shadow: 0 0 4px #000;
+  -webkit-text-shadow: 0 0 2px #000;
+  text-align:center;
+  color:#FFFFFF;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.title-font {
+  font-size: 35px;
+  text-shadow: hsl(0,0%,2%) 1px 1px, hsl(0,0%,2%) 2px 2px, hsl(0,0%,2%) 3px 3px;
+}
+
+a {
+  color:#FFFFFF;
+}
+
+.p-t-font {
+  color:#FFFFFF;
+  font-size: 20px;
+}
+
+.p-t-font:hover {
+  color:#FFFFFF;
+}
+
+.fa-home {
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.fa-home:hover {
+  color:#D1FF47;
+}
+
+.fa-plus {
+  padding-top: 10px;
+  font-size: 20px;
+}
+
+.fa-plus:hover {
+  color:#D1FF47;
+}
+
+
+.color-stand {
+  text-shadow: hsl(0,0%,2%) 1px 1px, hsl(0,0%,2%) 2px 2px, hsl(0,0%,2%) 3px 3px;
+}
+
+/*.log-font {
+  font-size: 17px;
+}*/
+
+.project-b {
+  font-size: 16px;
+}
+
+.b-position{
+  height:4px;
+}
+
+.font-s {
+  text-shadow: hsl(0,0%,9%) 1px 1px, hsl(0,0%,9%) 2px 2px, hsl(0,0%,9%) 3px 3px, hsl(0,0%,9%) 4px 4px, hsl(0,0%,9%) 5px 5px, hsl(0,0%,9%) 6px 6px;
+}
+
+.will-p {
+  padding-top: 10px;
+  position:relative;
+  left: 350px;
+}
+
+a:hover{
+  color:#FFFFFF;
+}
+
+.next_page:hover {
+  color:#FFFFFF;
+}
+
+body {
+ background: url('sheep.jpg') no-repeat;
+ color:#FFFFFF;
+}
+
+.header-nav {
+  position: relative;
+  top: -12px;
+  margin-top: 2px;
+  margin-bottom: 4px;
+  background: url("header-twitter.png");
+  text-decoration: none;
+  line-height: 2.6;
+}
+
+.btn{
+  background-color: rgba(250, 241, 241, 0);
+}
+
+.well {
+ background-color: rgba(104, 103, 99, 0.4);
+ position: relative;
+ top: 25px;
+ padding-left: 25px;
+ padding-top: 10px;
+ border-radius: 5px;
+
+}
+
+
+  
+
+
+
+
+
+
+
+

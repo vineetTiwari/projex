@@ -1,26 +1,31 @@
- <%=link_to "Projects Index", projects_path%>
- <hr>
-
- <h3> Edit this project </h3>
-
-  <%if @project.errors.any? %>
-    <ul>
-    <% @project.errors.full_messages.each do |msg| %>
-    <li> <%= msg %> </li>
-    <%end%>
-    </ul>
-  <%end%>
+<div class="col-xs-2">
+</div>
 
 
+<div class="col-xs-8">
+    <div class="well">
+        <div class="centered title-font font-s">
+            <h3>Edit</h3>
+        </div>
 
-<%=form_for @project do |x| %> 
-    <p>
-    <%=x.label :title%>
-    <%=x.text_field :title%> 
-    </p>
-    <p>
-    <%=x.label :body%>
-    <%=x.text_area :body%>
-    </p>
-    <%=x.submit%>
-<%end%> 
+        <%if @project.errors.any? %>
+            <% @project.errors.full_messages.each do |msg| %>
+                <%= msg %> 
+            <%end%>
+        <%end%>
+
+        <%=form_for @project do |x| %> 
+        <p><%=x.label :title%>
+           <%=x.text_field :title, class: "form-control form-t"%> 
+        </p>
+        <p><%=x.label :body%>
+           <%=x.text_area :body, class: "form-control"%>
+        </p>
+        <button type="submit" class="add-btn">
+                <i class="fa fa-check check-p"></i> 
+        <%end%> 
+    </div>
+</div>
+
+<div class="col-xs-2">
+</div>

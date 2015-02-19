@@ -6,5 +6,7 @@ class User < ActiveRecord::Base
          
   has_many :likes
   has_many :projects, through: :likes
-       end
 
+  has_many :favourites
+  has_many :tasks, through: :favourites
+end

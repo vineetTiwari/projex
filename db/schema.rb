@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150203021458) do
+ActiveRecord::Schema.define(version: 20150215201405) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -31,6 +31,16 @@ ActiveRecord::Schema.define(version: 20150203021458) do
 
   add_index "categorizations", ["category_id"], name: "index_categorizations_on_category_id", using: :btree
   add_index "categorizations", ["project_id"], name: "index_categorizations_on_project_id", using: :btree
+
+  create_table "favourites", force: :cascade do |t|
+    t.integer  "task_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "favourites", ["task_id"], name: "index_favourites_on_task_id", using: :btree
+  add_index "favourites", ["user_id"], name: "index_favourites_on_user_id", using: :btree
 
   create_table "likes", force: :cascade do |t|
     t.integer  "user_id"
@@ -76,6 +86,7 @@ ActiveRecord::Schema.define(version: 20150203021458) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "user_name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
@@ -83,6 +94,8 @@ ActiveRecord::Schema.define(version: 20150203021458) do
 
   add_foreign_key "categorizations", "categories"
   add_foreign_key "categorizations", "projects"
+  add_foreign_key "favourites", "tasks"
+  add_foreign_key "favourites", "users"
   add_foreign_key "likes", "projects"
   add_foreign_key "likes", "users"
   add_foreign_key "tasks", "projects"

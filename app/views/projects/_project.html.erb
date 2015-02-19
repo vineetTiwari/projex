@@ -1,0 +1,76 @@
+<!-- <div class="col-xs-2">
+</div>
+
+<div class="col-xs-8">
+
+  <div class="well">
+    <div class="centered p-t-font font-s p-t"><%=@project.title%></div>
+    <div class="project-b b-position font-s"><%=@project.body%></div>
+    <br>
+    <i class="font-s">by: <%#= @project.user.email if @project.user%></i>
+    <br>
+    <%#=link_to edit_project_path do %>
+      <i class="fa fa-pencil e-font-b"></i>
+    <%# end %>
+    <%#=link_to project_path, method: :delete, 
+    data: { confirm: "Are you Sure?"} do %>
+      <i class="fa fa-trash-o e-font-c"></i>
+    <%# end %>
+    <%#=link_to project_likes_path(@project), method: :post do %>
+      <i class="fa fa-thumbs-o-up e-font-d"></i>
+    <%# end %>
+    (<%=@project.likes.count%>)
+
+    <hr>
+    <div class="p-t-font font-s font-pad">
+      Current Task(s)
+    </div>
+
+    <hr class="h-width">
+    <%# @tasks.each do |task| %>
+    
+      <div class="row">
+        <div class="col-xs-12 col-hi-t">
+          <h4 class="font-s"><i>Title:</i>&nbsp;&nbsp;<%= task.title %></h4>&nbsp;&nbsp;
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-hi-b">
+          <h5 class="font-s"><i>Body:</i>&nbsp;&nbsp;<%= task.body %></h5>&nbsp;&nbsp;
+        </div>
+      </div>
+      <%#=link_to project_task_path(@project, task), method: :delete, 
+      data: { confirm: "Are you Sure?"} do%>
+        <i class="fa fa-trash-o e-font-c"></i>
+      <%# end %>
+
+    <%#end%>
+
+    <hr>
+
+    <div class="p-t-font font-s font-pad">
+      Add Task
+    </div>
+    <br>
+    <div class ="form-field">
+      <%#=form_for @task, url: project_tasks_path(@project) do |x| %>
+      <%#=x.label :title%>
+      <%#=x.text_area :title, class: "form-control form-t" %>
+      <br>
+      <%#=x.label :body %>
+      <%#=x.text_area :body, class: "form-control" %>
+      <button type="submit" class="add-btn">
+                <i class="fa fa-check check-p"></i> 
+      </button>
+      <%#end%> 
+    </div>
+
+  </div>
+
+</div>
+
+<div class="col-xs-2">
+</div>
+
+ -->

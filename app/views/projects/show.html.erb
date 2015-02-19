@@ -1,68 +1,79 @@
-
-<container>
-  
-<div class="cool">
-<h1> Current Project </h1>
-</div>
-<hr>
-<h3> Project title </h3>
-<%=@project.title%>
-<br>
-<h3> Project body </h3>
-<%=@project.body%>
-<br>
-<hr>
-<%=link_to "Edit this project", edit_project_path, class: "btn btn-default cool"%>
-<%=link_to "Delete this project", project_path, method: :delete, 
-data: { confirm: "Are you Sure?"}, class: "btn btn-default cool" %>
-<%=link_to "Like this project", project_likes_path(@project), method: :post, class: "btn btn-default cool"%>
-(<%=@project.likes.count%>)
-
-
-
-<hr>
-<hr>
-
-
-<div class="cool">
-<h1> Current Tasks </h1>
-</div>
-<hr>
-
-<% @tasks.each do |task| %>
-<h4> Task Title </h4>
-<%= task.title %>
-<br>
-<h4> Task body </h4>
-<%= task.body %>
-<%=link_to "Delete this task", project_task_path(@project, task), method: :delete, 
-data: { confirm: "Are you Sure?"}, class: "btn btn-default cool buttonbump" %>
-<hr>
-<%end%>
-
-
-<hr>
-<h4> Create a new task for this project </h4>
-
-<div class ="form-field">
-<%=form_for @task, url: project_tasks_path(@project) do |x| %>
-<%=x.label :title%>
-<%=x.text_area :title, class:"form-control" %>
-<br>
-<%=x.label :body %>
-<%=x.text_area :body, class:"form-control" %>
-<br>
-<%=x.submit class: "btn btn-default changed"%>
+<%#= render "project" %>
+<div class="col-xs-2">
 </div>
 
+<div class="col-xs-8">
 
-<%#= button_to() ,method: post %>
+  <div class="well">
+    <div class="centered p-t-font font-s p-t"><%=@project.title%></div>
+    <div class="project-b b-position font-s"><%=@project.body%></div>
+    <br>
+    <i class="font-s">by: <%= @project.user.email if @project.user%></i>
+    <br>
+    <%=link_to edit_project_path do %>
+      <i class="fa fa-pencil e-font-b"></i>
+    <% end %>
+    <%=link_to project_path, method: :delete, 
+    data: { confirm: "Are you Sure?"} do %>
+      <i class="fa fa-trash-o e-font-c"></i>
+    <% end %>
+    <%=link_to project_likes_path(@project), method: :post do %>
+      <i class="fa fa-thumbs-o-up e-font-d"></i>
+    <% end %>
+    (<%=@project.likes.count%>)
 
-</container>
+    <hr>
+    <div class="p-t-font font-s font-pad">
+      Current Task(s)
+    </div>
 
-<%end%> 
+    <hr class="h-width">
+    <% @tasks.each do |task| %>
+    
+      <div class="row">
+        <div class="col-xs-12 col-hi-t">
+          <h4 class="font-s"><i>Title:</i>&nbsp;&nbsp;<%= task.title %></h4>&nbsp;&nbsp;
+        </div>
+      </div>
 
+      <div class="row">
+        <div class="col-xs-12 col-hi-b">
+          <h5 class="font-s"><i>Body:</i>&nbsp;&nbsp;<%= task.body %></h5>&nbsp;&nbsp;
+        </div>
+      </div>
+      <%=link_to project_task_path(@project, task), method: :delete, 
+      data: { confirm: "Are you Sure?"} do%>
+        <i class="fa fa-trash-o e-font-c"></i>
+      <% end %>
 
+    <%end%>
+
+    <hr>
+
+    <div class="p-t-font font-s font-pad">
+      Add Task
+    </div>
+    <br>
+    <div class ="form-field">
+      <%=form_for @task, url: project_tasks_path(@project) do |x| %>
+      <%=x.label :title%>
+      <%=x.text_area :title, class: "form-control form-t" %>
+      <br>
+      <%=x.label :body %>
+      <%=x.text_area :body, class: "form-control" %>
+      <%=x.submit 'Save', class: "submit-btn save-btn" %>
+      <!-- <button type="submit" class="add-btn">
+                <i class="fa fa-check check-p"></i> 
+      </button> -->
+      <%end%> 
+    </div>
+
+  </div>
+
+</div>
+
+<div class="col-xs-2">
+</div>
 
 
 

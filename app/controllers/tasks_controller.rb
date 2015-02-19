@@ -1,14 +1,13 @@
 class TasksController < ApplicationController
-
-      before_action :authenticate_user!, :only => [:create]
+  before_action :authenticate_user!, :only => [:create]
+  
   def create
     @project=Project.find(params[:project_id])
     @task=@project.tasks.new(params.require(:task).permit( [:title, :body] ))
     if @task.save
-    redirect_to @project, notice: "Task created!"
+       redirect_to @project
     else
-    flash.now[:alert] = "Something went wrong. try again please!"
-    redirect_to @project
+       redirect_to @project
     end
   end
 
@@ -16,12 +15,12 @@ class TasksController < ApplicationController
     @project=Project.find(params[:project_id])
     @task=Task.find(params[:id])
     if @task.destroy
-        redirect_to project_path(@project), notice:"Task Deleted!"
+       redirect_to project_path(@project)
     else
-        redirect_to project_path, notice:"There was an error while deleting task, try again!"
+       redirect_to project_path
     end
 
-end
+  end
 
 
 end

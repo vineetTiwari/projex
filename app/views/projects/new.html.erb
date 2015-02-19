@@ -1,29 +1,35 @@
-<hr>
-<hr>
-
-<h1> Create New Project </h1>
-<hr>
-
-
- 
-  <%if @project.errors.any? %>
-    <ul>
-    <% @project.errors.full_messages.each do |msg| %>
-    <li> <%= msg %> </li>
-    <%end%>
-    </ul>
-  <%end%>
-
-
-<div class="form-field">
-<%=form_for @project do |x| %> 
-    <%=x.label :title%>
-    <%=x.text_field :title, class:"form-control" %> 
-    <%=x.label :body%>
-    <%=x.text_area :body, class:"form-control"%>
-    <%=x.submit class: "btn changed"%>
-<%end%> 
+<div class="col-xs-2">
 </div>
+
+<div class="col-xs-8">
+    <div class="centered title-font">
+        New
+    </div>
+
+    <div class="well">
+        <%if @project.errors.any? %>
+            <% @project.errors.full_messages.each do |msg| %>
+                <%= msg %>
+            <%end%>
+        <%end%>
+
+
+        <div class="form-field">
+            <%=form_for @project do |x| %> 
+                <%=x.label :title%>
+                <%=x.text_field :title, class: "form-control form-t" %> 
+                <%=x.label :body%>
+                <%=x.text_area :body, class: "form-control"%>
+                <%=x.submit 'Done', class: "submit-btn"%>
+            <%end%> 
+        </div>
+    </div>
+
+</div>
+
+<div class="col-xs-2">
+</div>
+
 
 
 

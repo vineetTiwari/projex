@@ -1,3 +1,118 @@
 // Place all the styles related to the task controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+hr {
+  margin-bottom: 0px;
+}
+
+.h-width {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 30%;
+  position:relative;
+  left:-300px;
+}
+
+.e-font-a {
+  font-size: 18px;
+}
+
+.e-font-a:hover {
+  color:#D1FF47;
+}
+
+.e-font-b {
+  font-size: 18px;
+}
+
+.e-font-b:hover {
+  color:#FF9900;
+}
+
+.form-control {
+  height:28px;
+  color:#FFFFFF;
+  background-color:rgba(255, 255, 255, 0.3);
+}
+
+.submit-btn {
+  color:#FFFFFF;
+  background-color:rgba(255, 255, 255, 0);
+  border:rgba(255, 255, 255, 0);
+  padding-left: 0px;
+}
+
+.submit-btn:hover {
+  color:#FFFFFF;
+}
+
+.e-font-c {
+  font-size: 18px;
+}
+
+.e-font-c:hover {
+  color:#D14719;
+}
+
+.e-font-d {
+  font-size: 18px;
+}
+
+.e-font-d:hover {
+  color:#99CC00;
+}
+
+.font-pad {
+  padding-top: 10px;
+}
+
+.col-hi-t {
+  height:30px;
+}
+
+.col-hi-b {
+  height:30px;
+}
+
+.add-btn {
+  padding-left: 0px;
+  padding-top:5px;
+  background-color:rgba(255, 255, 255, 0);
+  border:rgba(255, 255, 255, 0);
+}
+
+.form-t {
+  width: 50%;
+}
+
+.fa-check {
+  padding-top: 0px;
+  font-size: 20px;
+}
+
+.fa-check:hover {
+  color:#D1FF47;
+}
+
+.form-l {
+  background-color: rgba(104, 103, 99, 0.4);
+  width: 30%;
+}
+
+.check-p {
+  padding-top: 10px;
+}
+
+.sign-f {
+  font-size: 20px;
+}
+
+.save-btn {
+  padding-top: 10px;
+  font-size: 15px;
+}
+
+.save-btn:hover {
+  color:#D1FF47;
+}
